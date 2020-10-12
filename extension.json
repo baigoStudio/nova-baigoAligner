@@ -3,8 +3,8 @@
     "name": "baigoAligner",
         "organization": "baigoStudio",
         "description": "Use equal signs or colons to align codes.",
-        "version": "0.1.0",
-        "bugs": "https://github.com/archaica/URLEncoder/issues",
+        "version": "0.1.1",
+        "bugs": "https://github.com/baigoStudio/nova-baigoAligner/issues",
 
         "categories": ["formatters"],
         "main": "main.js",
