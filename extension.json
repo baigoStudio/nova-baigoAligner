@@ -1,0 +1,35 @@
+{
+    "identifier": "baigoStudio.baigoAligner",
+    "name": "baigoAligner",
+        "organization": "baigoStudio",
+        "description": "Use equal signs or colons to align codes.",
+        "version": "0.1.0",
+        "bugs": "https://github.com/archaica/URLEncoder/issues",
+
+        "categories": ["formatters"],
+        "main": "main.js",
+        "commands": {
+            "editor": [
+                {
+                    "title": "Align Equals",
+                    "command": "baigoAligner.alignEquals",
+                    "when": "editorHasSelection"
+                },
+                {
+                    "title": "Remove Spaces Before Equal",
+                    "command": "baigoAligner.removeBeforeEqual",
+                    "when": "editorHasSelection"
+                },
+                {
+                    "title": "Align Colons",
+                    "command": "baigoAligner.alignColons",
+                    "when": "editorHasSelection"
+                },
+                {
+                    "title": "Remove Spaces Before Colon",
+                    "command": "baigoAligner.removeBeforeColon",
+                    "when": "editorHasSelection"
+                }
+            ]
+        }
+    }
