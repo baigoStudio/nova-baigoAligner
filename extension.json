@@ -3,7 +3,7 @@
     "name": "baigoAligner",
         "organization": "baigoStudio",
         "description": "Use equal signs or colons to align codes.",
-        "version": "0.1.1",
+        "version": "0.1.2",
         "bugs": "https://github.com/baigoStudio/nova-baigoAligner/issues",
 
         "categories": ["formatters"],
