@@ -60,6 +60,21 @@ nova.commands.register('baigoAligner.removeBeforeColon', (editor) => {
     editor.scrollToCursorPosition();
 });
 
+nova.commands.register('baigoAligner.stripTags', (editor) => {
+    var selectedRanges = editor.selectedRanges.reverse(); // 取得选中
+
+    editor.edit(function(e) {
+        for (var range of selectedRanges) {
+            var selectedText = editor.getTextInRange(range);
+            var newText      = baigoAligner.stripTags(selectedText);
+            e.delete(range);
+            e.insert(range.start, newText);
+        }
+    });
+
+    editor.scrollToCursorPosition();
+});
+
 var baigoAligner = {
     align: function(selectedText, symbol, remove){
         var arr_selectedText = selectedText.split('\n');
@@ -161,7 +176,7 @@ var baigoAligner = {
             }
         }
 
-        if (symbol == '=' || symbol == '.=' || symbol == '+=' ) {
+        if (symbol == '=' || symbol == '.=' || symbol == '+=') {
             arr_textItem[0] += ' ';
         }
 
@@ -174,5 +189,14 @@ var baigoAligner = {
         }
 
         return str_newLine;
+    },
+    stripTags(selectedText) {
+        var str_newText  = '';
+
+        if (typeof selectedText == 'string') {
+            str_newText = selectedText.replace(/(<([^>]+)>)/ig, '');
+        }
+
+        return str_newText;
     }
 };

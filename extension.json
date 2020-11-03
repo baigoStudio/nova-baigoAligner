@@ -2,8 +2,8 @@
     "identifier": "baigoStudio.baigoAligner",
     "name": "baigoAligner",
         "organization": "baigoStudio",
-        "description": "Use equal signs or colons to align codes.",
-        "version": "0.1.2",
+        "description": "Editor plug-in, supports such as equal sign alignment, colon alignment, tags removal, etc.",
+        "version": "1.0.0",
         "bugs": "https://github.com/baigoStudio/nova-baigoAligner/issues",
 
         "categories": ["formatters"],
@@ -28,6 +28,11 @@
                 {
                     "title": "Remove Spaces Before Colon",
                     "command": "baigoAligner.removeBeforeColon",
+                    "when": "editorHasSelection"
+                },
+                {
+                    "title": "Strip Tags",
+                    "command": "baigoAligner.stripTags",
                     "when": "editorHasSelection"
                 }
             ]
