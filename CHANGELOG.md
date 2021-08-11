@@ -1,3 +1,7 @@
+## Version 1.1.0
+
+Support case conversion
+
 ## Version 1.0.0
 
 Support strip tags

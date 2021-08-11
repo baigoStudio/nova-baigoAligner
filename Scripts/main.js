@@ -75,6 +75,36 @@ nova.commands.register('baigoAligner.stripTags', (editor) => {
     editor.scrollToCursorPosition();
 });
 
+nova.commands.register('baigoAligner.strtoUpper', (editor) => {
+    var selectedRanges = editor.selectedRanges.reverse(); // 取得选中
+
+    editor.edit(function(e) {
+        for (var range of selectedRanges) {
+            var selectedText = editor.getTextInRange(range);
+            var newText      = baigoAligner.strtoUpper(selectedText);
+            e.delete(range);
+            e.insert(range.start, newText);
+        }
+    });
+
+    editor.scrollToCursorPosition();
+});
+
+nova.commands.register('baigoAligner.strtoLower', (editor) => {
+    var selectedRanges = editor.selectedRanges.reverse(); // 取得选中
+
+    editor.edit(function(e) {
+        for (var range of selectedRanges) {
+            var selectedText = editor.getTextInRange(range);
+            var newText      = baigoAligner.strtoLower(selectedText);
+            e.delete(range);
+            e.insert(range.start, newText);
+        }
+    });
+
+    editor.scrollToCursorPosition();
+});
+
 var baigoAligner = {
     align: function(selectedText, symbol, remove){
         var arr_selectedText = selectedText.split('\n');
@@ -195,6 +225,24 @@ var baigoAligner = {
 
         if (typeof selectedText == 'string') {
             str_newText = selectedText.replace(/(<([^>]+)>)/ig, '');
+        }
+
+        return str_newText;
+    },
+    strtoUpper(selectedText) {
+        var str_newText  = '';
+
+        if (typeof selectedText == 'string') {
+            str_newText = selectedText.toUpperCase();
+        }
+
+        return str_newText;
+    },
+    strtoLower(selectedText) {
+        var str_newText  = '';
+
+        if (typeof selectedText == 'string') {
+            str_newText = selectedText.toLowerCase();
         }
 
         return str_newText;
