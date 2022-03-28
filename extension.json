@@ -1,50 +1,50 @@
 {
-    "identifier": "baigoStudio.baigoAligner",
-    "name": "baigoAligner",
-        "organization": "baigoStudio",
-        "description": "Editor plug-in, supports such as equal sign alignment, colon alignment, tags removal, etc.",
-        "version": "1.1.0",
-        "bugs": "https://github.com/baigoStudio/nova-baigoAligner/issues",
+  "identifier": "baigoStudio.baigoAligner",
+  "name": "baigoAligner",
+  "organization": "baigoStudio",
+  "description": "Editor plug-in, supports such as equal sign alignment, colon alignment, tags removal, etc.",
+  "version": "1.1.0",
+  "bugs": "https://github.com/baigoStudio/nova-baigoAligner/issues",
 
-        "categories": ["formatters"],
-        "main": "main.min.js",
-        "commands": {
-            "editor": [
-                {
-                    "title": "Align Equals",
-                    "command": "baigoAligner.alignEquals",
-                    "when": "editorHasSelection"
-                },
-                {
-                    "title": "Remove Spaces Before Equal",
-                    "command": "baigoAligner.removeBeforeEqual",
-                    "when": "editorHasSelection"
-                },
-                {
-                    "title": "Align Colons",
-                    "command": "baigoAligner.alignColons",
-                    "when": "editorHasSelection"
-                },
-                {
-                    "title": "Remove Spaces Before Colon",
-                    "command": "baigoAligner.removeBeforeColon",
-                    "when": "editorHasSelection"
-                },
-                {
-                    "title": "Strip Tags",
-                    "command": "baigoAligner.stripTags",
-                    "when": "editorHasSelection"
-                },
-                {
-                    "title": "Convert to uppercase",
-                    "command": "baigoAligner.strtoUpper",
-                    "when": "editorHasSelection"
-                },
-                {
-                    "title": "Convert to lowercase",
-                    "command": "baigoAligner.strtoLower",
-                    "when": "editorHasSelection"
-                }
-            ]
-        }
-    }
+  "categories": ["formatters"],
+  "main": "main.min.js",
+  "commands": {
+    "editor": [
+      {
+        "title": "Align Equals",
+        "command": "baigoAligner.alignEquals",
+        "when": "editorHasSelection"
+      },
+      {
+        "title": "Remove Spaces Before Equal",
+        "command": "baigoAligner.removeBeforeEqual",
+        "when": "editorHasSelection"
+      },
+      {
+        "title": "Align Colons",
+        "command": "baigoAligner.alignColons",
+        "when": "editorHasSelection"
+      },
+      {
+        "title": "Remove Spaces Before Colon",
+        "command": "baigoAligner.removeBeforeColon",
+        "when": "editorHasSelection"
+      },
+      {
+        "title": "Strip Tags",
+        "command": "baigoAligner.stripTags",
+        "when": "editorHasSelection"
+      },
+      {
+        "title": "Convert to uppercase",
+        "command": "baigoAligner.strtoUpper",
+        "when": "editorHasSelection"
+      },
+      {
+        "title": "Convert to lowercase",
+        "command": "baigoAligner.strtoLower",
+        "when": "editorHasSelection"
+      }
+    ]
+  }
+}
